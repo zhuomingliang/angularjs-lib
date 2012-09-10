@@ -1,0 +1,13 @@
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+<div ng-app="lib">
+  <form name="myForm">
+   <input type="phone"
+        name="phone" ng-model="phone"
+      required />
+    <span ng-show="myForm.phone.$error.required">必填项!</span>
+    <span ng-show="myForm.phone.$error.wrong">电话号码无效!</span>
+    <span ng-show="!myForm.phone.$error.required && !myForm.phone.$error.wrong">对!</span>
+   <hr>
+   <textarea ng-model="phone"></textarea>
+  </form>
+</div>
